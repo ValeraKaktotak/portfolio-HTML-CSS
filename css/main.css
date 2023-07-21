@@ -6,6 +6,22 @@ font-family: 'DM Sans', sans-serif;
 font-family: 'Poppins', sans-serif;
 */
 
-html, body{
+html,
+body {
     font-family: 'DM Sans', sans-serif;
+}
+
+.container {
+    width: 100%;
+    padding: 0 15px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Nav */
+.nav {
+    background-color: #171718;
+    color: #fff;
+    padding: 20px 0;
+    border-bottom: 1px solid #26292D;
 }
