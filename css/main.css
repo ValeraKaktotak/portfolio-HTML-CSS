@@ -15,12 +15,15 @@ font-family: 'Poppins', sans-serif;
     --dark-bg: var(--black);
     --dark-border: var(--black-border);
     --header-text: var(--white);
+    --page-text-color: var(--black);
     --accent: var(--purple);
 }
 
 html,
 body {
     font-family: 'DM Sans', sans-serif;
+    letter-spacing: -0.5px;
+    color: var(--page-text-color);
 }
 
 .container {
@@ -36,6 +39,7 @@ body {
     color: var(--header-text);
     padding: 20px 0;
     border-bottom: 1px solid var(--dark-border);
+    letter-spacing: normal;
 }
 
 .nav-row {
@@ -68,6 +72,11 @@ body {
 
 .nav-list__link {
     color: var(--header-text);
+    transition: opacity 0.2s ease-in;
+}
+
+.nav-list__link:hover {
+    opacity: 0.5;
 }
 
 .nav-list__link--active {
@@ -83,4 +92,85 @@ body {
     height: 3px;
     width: 100%;
     background-color: var(--accent);
+}
+
+
+/* Header */
+
+.header {
+    background-color: var(--dark-bg);
+
+    background-image: url(../img/header-bg.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: auto;
+
+    color: var(--header-text);
+    min-height: 695px;
+    padding: 40px 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+}
+
+.header__wrapper {
+    max-width: 660px;
+    width: 100%;
+    padding: 0 15px;
+}
+
+.header__title {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.4;
+    margin-bottom: 20px;
+}
+
+.header__title strong {
+    font-size: 60px;
+    font-weight: 700;
+}
+
+.header__title em {
+    font-style: normal;
+    color: var(--accent);
+}
+
+.header__text {
+    font-size: 18px;
+    line-height: 1.333;
+    margin-bottom: 40px;
+    font-weight: 500;
+}
+
+.header__text p+p {
+    margin-top: 0.5em;
+}
+
+.btn {
+    display: inline-block;
+    vertical-align: middle;
+    height: 48px;
+    padding: 12px 28px;
+    border-radius: 5px;
+    background-color: var(--accent);
+    color: var(--white);
+    letter-spacing: 0.15px;
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 500;
+    transition: opacity 0.2s ease-in;
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+
+.btn:active {
+    position: relative;
+    top: 1px;
+    left: 1px;
 }
